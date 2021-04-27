@@ -2,6 +2,7 @@
  * Created 2021-04-27
  *
  * @author
+ * Me
  */
 import javax.swing.*;
 import java.awt.*;
@@ -11,8 +12,8 @@ import java.awt.image.BufferedImage;
 
 
 public class FyraIRad extends Canvas implements Runnable{
-    private int width = 800;
-    private int height = 600;
+    private final int width = 800;
+    private final int height = 600;
 
     private Thread thread;
     int fps = 100;
@@ -24,7 +25,7 @@ public class FyraIRad extends Canvas implements Runnable{
 
 
     public FyraIRad() {
-        JFrame frame = new JFrame("A simple painting");
+        JFrame frame = new JFrame("A simp");
         this.setSize(width,height);
         frame.add(this);
         frame.pack();
@@ -91,7 +92,6 @@ public class FyraIRad extends Canvas implements Runnable{
                 draw();
                 lastTime = now;
             }
-
         }
         stop();
     }
