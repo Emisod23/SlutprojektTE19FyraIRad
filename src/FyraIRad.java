@@ -4,15 +4,18 @@
  * @author
  * Me
  */
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 
 public class FyraIRad extends Canvas implements Runnable{
-    private final int width = 800;
+    private final int width = 700;
     private final int height = 600;
 
     private Thread thread;
@@ -20,12 +23,18 @@ public class FyraIRad extends Canvas implements Runnable{
     private boolean isRunning;
 
     private BufferStrategy bs;
-    private BufferedImage image;
+    private BufferedImage fyrairad;
 
 
 
     public FyraIRad() {
-        JFrame frame = new JFrame("A simp");
+
+        try {
+            fyrairad = ImageIO.read(new File("fyrairad.png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        JFrame frame = new JFrame("Fyra i rad");
         this.setSize(width,height);
         frame.add(this);
         frame.pack();
@@ -34,7 +43,6 @@ public class FyraIRad extends Canvas implements Runnable{
         frame.setVisible(true);
 
         isRunning = false;
-
 
 
     }
@@ -52,10 +60,9 @@ public class FyraIRad extends Canvas implements Runnable{
         Graphics g = bs.getDrawGraphics();
 
         update();
-        g.setColor(Color.WHITE);
-        g.fillRect(0,0,width,height);
         g.dispose();
         bs.show();
+        g.drawImage(fyrairad,100,100, null);
     }
 
 
