@@ -15,8 +15,8 @@ import java.io.IOException;
 
 
 public class FyraIRad extends Canvas implements Runnable{
-    private final int width = 700;
-    private final int height = 600;
+    private final int width = 588;
+    private final int height = 554;
 
     private Thread thread;
     int fps = 100;
@@ -59,10 +59,14 @@ public class FyraIRad extends Canvas implements Runnable{
         }
         Graphics g = bs.getDrawGraphics();
 
-        update();
+
+        g.setColor(Color.white);
+        g.drawImage(fyrairad,0,50, null);
+        g.setColor(new Color(255, 0, 0));
+        g.fillOval(7, 58, 70, 70);
+        g.fillOval(92, 141, 70, 70);
         g.dispose();
         bs.show();
-        g.drawImage(fyrairad,100,100, null);
     }
 
 
