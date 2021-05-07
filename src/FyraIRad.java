@@ -65,6 +65,15 @@ public class FyraIRad extends Canvas implements Runnable{
         g.setColor(new Color(255, 0, 0));
         g.fillOval(7, 58, 70, 70);
         g.fillOval(92, 141, 70, 70);
+        g.setColor(new Color(0, 0, 0));
+        g.setFont(new Font("ComicSans", Font.PLAIN, 40));
+        g.drawString("A", 30, 40);
+        g.drawString("S", 115, 40);
+        g.drawString("D", 200, 40);
+        g.drawString("F", 285, 40);
+        g.drawString("G", 365, 40);
+        g.drawString("H", 450, 40);
+        g.drawString("J", 540, 40);
         g.dispose();
         bs.show();
     }
