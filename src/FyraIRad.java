@@ -19,7 +19,7 @@ public class FyraIRad extends Canvas implements Runnable{
     private final int height = 554;
 
     private Thread thread;
-    int fps = 100;
+    int fps = 30;
     private boolean isRunning;
 
     private BufferStrategy bs;
@@ -61,6 +61,7 @@ public class FyraIRad extends Canvas implements Runnable{
 
 
         g.setColor(Color.white);
+        g.fillRect(0, 0, width, height);
         g.drawImage(fyrairad,0,50, null);
         g.setColor(new Color(255, 0, 0));
         g.fillOval(7, 58, 70, 70);
