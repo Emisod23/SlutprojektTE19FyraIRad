@@ -12,11 +12,12 @@ import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 
 public class FyraIRad extends Canvas implements Runnable{
-    private final int width = 588;
-    private final int height = 554;
+    private int width = 588;
+    private int height = 554;
 
     private Thread thread;
     int fps = 30;
@@ -24,6 +25,7 @@ public class FyraIRad extends Canvas implements Runnable{
 
     private BufferStrategy bs;
     private BufferedImage fyrairad;
+    public ArrayList<Array> Board = new ArrayList<>();
 
 
 
