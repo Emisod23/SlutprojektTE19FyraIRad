@@ -1,10 +1,11 @@
 # Titel
 
-Författare och datum.
+Emil Söderlund 01/06-2021
 
 ## Inledning
 
 Här beskriver du kortfattat arbetets syfte/mål, arbetssätt, genomförande.
+Mitt mål med uppgiften var att skapa ett av mina favorit spel, fyra i rad, som kunde i alla fall spelas korrekt.
 
 ## Bakgrund
 
