@@ -12,11 +12,12 @@ import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.Objects;
 
 
 public class FyraIRad extends Canvas implements Runnable{
     private int width = 588;
-    private int height = 614;
+    private int height = 554;
 
     private Thread thread;
     int fps = 30;
@@ -29,7 +30,7 @@ public class FyraIRad extends Canvas implements Runnable{
     public FyraIRad() {
 
         try {
-            fyrairad = ImageIO.read(new File("fyrairad.png"));
+            fyrairad = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("images/fyrairad.png")));
         } catch (IOException e) {
             e.printStackTrace();
         }
